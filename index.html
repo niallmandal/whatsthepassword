@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <title>Index</title>
+</head>
+<body>
+
+<!-- <button onclick="myFunction()" id="submit">Submit</button> -->
+
+<div class="hero bg-gray">
+  <div class="hero-body">
+    <h1><mark>Explode the Code!</mark></h1>
+    <div class="column col-4">
+    	<div class="toast toast-error" id="incorrect">
+  		<button class="btn btn-clear float-right" onclick="closeIncorrect()"></button>
+  			Incorrect Code
+		</div>
+    <br>
+    </div>
+    
+    <div class="columns col-oneline">
+      <div class="column col-3">
+        <input class="form-input" id="pw-input" placeholder="Code">
+      </div>
+      <div class="column col-1">
+        <button class="btn btn-primary btn-success" id="explodeBtn" onclick="myFunction()">explode!</button>
+      </div>
+	</div>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  if (document.getElementById("pw-input").value === "6321") {
+    window.location.href = "https://madiandniall.web.app/";
+  }
+  else {
+    document.getElementById("pw-input").value = ""
+    let incorrect = document.getElementById("incorrect")
+  	incorrect.style.display = "block"
+  }
+}
+  
+function closeIncorrect(){
+  let incorrect = document.getElementById("incorrect")
+  incorrect.style.display = "none"
+}
+</script>
+
+</body>
+</html>
